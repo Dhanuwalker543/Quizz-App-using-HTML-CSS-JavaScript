@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        html, body {
+            display: flexbox;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #00f260, #0575e6);
+        }
+        .container {
+            margin-bottom: 2rem;
+            margin-top: 1em;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        ul {
+            padding: 0;
+            width: 100%;
+        }
+        li {
+            list-style: none;
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            padding: 1rem;
+            background-color: rgba(0, 255, 255, 0.3);
+            margin: 1rem 0;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+        li:hover {
+            background-color: rgba(0, 255, 255, 0.5);
+            transform: scale(1.05);
+        }
+        button {
+            background-color: #e73333;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+        button:hover {
+            background-color: #c82d2d;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 0, 0, 0.7);
+            transform: scale(1.05);
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        h1 {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+        #title{
+            margin-top: 1rem;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Quizz</h1>
+    <div class="container">
+        <h1>In web design, what does CSS stand for?</h1>
+        <div class="options">
+            <ul>
+                <li><button onclick="ansChecker(this)" id="answer">A</button>&nbsp;&nbsp;Cascading Style Sheet</li>
+                <li><button onclick="ansChecker(this)" id="wrong1">B</button>&nbsp;&nbsp;Cross Style Sheet</li>
+                <li><button onclick="ansChecker(this)" id="wrong2">C</button>&nbsp;&nbsp;Concordinate Style Sheet</li>
+                <li><button onclick="ansChecker(this)" id="wrong3">D</button>&nbsp;&nbsp;Casting Style Sheet</li>
+            </ul>
+        </div>
+        </div>
+        <div class="container">
+        <h1>What does HTML stand for?</h1>
+        <div class="options">
+            <ul>
+                <li><button onclick="ansChecker(this)" id="answer2">A</button>&nbsp;&nbsp;Hyper Text Markup Language</li>
+                <li><button onclick="ansChecker(this)" id="wrong4">B</button>&nbsp;&nbsp;Home Tool Markup Language</li>
+                <li><button onclick="ansChecker(this)" id="wrong5">C</button>&nbsp;&nbsp;Hyperlinks and Text Markup Language</li>
+                <li><button onclick="ansChecker(this)" id="wrong6">D</button>&nbsp;&nbsp;Hyper Tool Markup Language</li>
+            </ul>
+        </div>
+        </div>
+        <div class="container">
+        <h1>What does SQL stand for?</h1>
+        <div class="options">
+            <ul>
+                <li><button onclick="ansChecker(this)" id="answer3">A</button>&nbsp;&nbsp;Structured Query Language</li>
+                <li><button onclick="ansChecker(this)" id="wrong7">B</button>&nbsp;&nbsp;Strong Question Language</li>
+                <li><button onclick="ansChecker(this)" id="wrong8">C</button>&nbsp;&nbsp;Stylish Question Language</li>
+                <li><button onclick="ansChecker(this)" id="wrong9">D</button>&nbsp;&nbsp;Statement Question Language</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function ansChecker(element) {
+            if (element.id === "answer" || element.id === "answer2" || element.id === "answer3") {
+                element.style.backgroundColor = "green";
+            } else {
+                alert("Incorrect! Try again.");
+            }
+        }
+    </script>
+</body>
+</html>
